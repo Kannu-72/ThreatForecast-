@@ -1,0 +1,6 @@
+{
+  "T1046": {"name": "Network Service Scanning", "tactic": "Discovery"},
+  "T1498": {"name": "Network Denial of Service", "tactic": "Impact"},
+  "T1110": {"name": "Brute Force", "tactic": "Credential Access"},
+  "T1190": {"name": "Exploit Public-Facing Application", "tactic": "Initial Access"}
+}

@@ -1,0 +1,22 @@
+{
+  "project": "PREVENT-X",
+  "operational_threshold": 0.05,
+  "threshold_type": "risk_score",
+  "warning_rule": "forecast_risk >= 0.05",
+  "forecast_horizons_seconds": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "model": "single Transformer, direct multi-horizon forecasting",
+  "input_shape": [
+    5,
+    45
+  ],
+  "output_shape": [
+    6
+  ]
+}

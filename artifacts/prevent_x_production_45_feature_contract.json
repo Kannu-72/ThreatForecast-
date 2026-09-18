@@ -1,0 +1,281 @@
+{
+  "project": "PREVENT-X",
+  "state_duration_seconds": 10,
+  "history_states": 5,
+  "history_duration_seconds": 50,
+  "feature_count": 45,
+  "feature_names": [
+    "packet_count",
+    "bytes_total",
+    "packets_per_sec",
+    "bytes_per_sec",
+    "packet_length_mean",
+    "packet_length_std",
+    "packet_length_min",
+    "packet_length_max",
+    "src_ip_count",
+    "dst_ip_count",
+    "unique_flow_pairs",
+    "src_port_count",
+    "dst_port_count",
+    "protocol_count",
+    "src_to_dst_ip_ratio",
+    "tcp_packet_ratio",
+    "udp_packet_ratio",
+    "icmp_packet_ratio",
+    "syn_count",
+    "syn_ratio",
+    "ack_count",
+    "ack_ratio",
+    "fin_count",
+    "rst_count",
+    "rst_ratio",
+    "psh_count",
+    "tcp_flag_pattern_count",
+    "ttl_mean",
+    "ttl_std",
+    "ttl_min",
+    "ttl_max",
+    "tcp_window_mean",
+    "tcp_window_std",
+    "zero_tcp_window_ratio",
+    "src_ip_entropy",
+    "dst_port_entropy",
+    "iat_mean",
+    "iat_std",
+    "iat_max",
+    "active_duration_sec",
+    "iat_burstiness",
+    "max_src_ip_share",
+    "max_dst_port_share",
+    "missing_packet_length_ratio",
+    "missing_ttl_ratio"
+  ],
+  "features": [
+    {
+      "index": 1,
+      "name": "packet_count",
+      "definition": "Total packets in the 10-second state"
+    },
+    {
+      "index": 2,
+      "name": "bytes_total",
+      "definition": "Total packet bytes in the 10-second state"
+    },
+    {
+      "index": 3,
+      "name": "packets_per_sec",
+      "definition": "packet_count / 10"
+    },
+    {
+      "index": 4,
+      "name": "bytes_per_sec",
+      "definition": "bytes_total / 10"
+    },
+    {
+      "index": 5,
+      "name": "packet_length_mean",
+      "definition": "Mean packet length"
+    },
+    {
+      "index": 6,
+      "name": "packet_length_std",
+      "definition": "Standard deviation of packet length"
+    },
+    {
+      "index": 7,
+      "name": "packet_length_min",
+      "definition": "Minimum packet length"
+    },
+    {
+      "index": 8,
+      "name": "packet_length_max",
+      "definition": "Maximum packet length"
+    },
+    {
+      "index": 9,
+      "name": "src_ip_count",
+      "definition": "Number of unique source IP addresses"
+    },
+    {
+      "index": 10,
+      "name": "dst_ip_count",
+      "definition": "Number of unique destination IP addresses"
+    },
+    {
+      "index": 11,
+      "name": "unique_flow_pairs",
+      "definition": "Number of unique (src_ip, dst_ip) pairs"
+    },
+    {
+      "index": 12,
+      "name": "src_port_count",
+      "definition": "Number of unique source ports"
+    },
+    {
+      "index": 13,
+      "name": "dst_port_count",
+      "definition": "Number of unique destination ports"
+    },
+    {
+      "index": 14,
+      "name": "protocol_count",
+      "definition": "Number of unique protocols"
+    },
+    {
+      "index": 15,
+      "name": "src_to_dst_ip_ratio",
+      "definition": "src_ip_count / dst_ip_count"
+    },
+    {
+      "index": 16,
+      "name": "tcp_packet_ratio",
+      "definition": "TCP packets / total packets"
+    },
+    {
+      "index": 17,
+      "name": "udp_packet_ratio",
+      "definition": "UDP packets / total packets"
+    },
+    {
+      "index": 18,
+      "name": "icmp_packet_ratio",
+      "definition": "ICMP packets / total packets"
+    },
+    {
+      "index": 19,
+      "name": "syn_count",
+      "definition": "TCP packets containing SYN"
+    },
+    {
+      "index": 20,
+      "name": "syn_ratio",
+      "definition": "syn_count / TCP packet count"
+    },
+    {
+      "index": 21,
+      "name": "ack_count",
+      "definition": "TCP packets containing ACK"
+    },
+    {
+      "index": 22,
+      "name": "ack_ratio",
+      "definition": "ack_count / TCP packet count"
+    },
+    {
+      "index": 23,
+      "name": "fin_count",
+      "definition": "TCP packets containing FIN"
+    },
+    {
+      "index": 24,
+      "name": "rst_count",
+      "definition": "TCP packets containing RST"
+    },
+    {
+      "index": 25,
+      "name": "rst_ratio",
+      "definition": "rst_count / TCP packet count"
+    },
+    {
+      "index": 26,
+      "name": "psh_count",
+      "definition": "TCP packets containing PSH"
+    },
+    {
+      "index": 27,
+      "name": "tcp_flag_pattern_count",
+      "definition": "Number of unique TCP flag patterns"
+    },
+    {
+      "index": 28,
+      "name": "ttl_mean",
+      "definition": "Mean TTL"
+    },
+    {
+      "index": 29,
+      "name": "ttl_std",
+      "definition": "Standard deviation of TTL"
+    },
+    {
+      "index": 30,
+      "name": "ttl_min",
+      "definition": "Minimum TTL"
+    },
+    {
+      "index": 31,
+      "name": "ttl_max",
+      "definition": "Maximum TTL"
+    },
+    {
+      "index": 32,
+      "name": "tcp_window_mean",
+      "definition": "Mean TCP window size"
+    },
+    {
+      "index": 33,
+      "name": "tcp_window_std",
+      "definition": "Standard deviation of TCP window size"
+    },
+    {
+      "index": 34,
+      "name": "zero_tcp_window_ratio",
+      "definition": "TCP packets with zero window / TCP packets"
+    },
+    {
+      "index": 35,
+      "name": "src_ip_entropy",
+      "definition": "Entropy of source-IP distribution"
+    },
+    {
+      "index": 36,
+      "name": "dst_port_entropy",
+      "definition": "Entropy of destination-port distribution"
+    },
+    {
+      "index": 37,
+      "name": "iat_mean",
+      "definition": "Mean within-state inter-arrival time"
+    },
+    {
+      "index": 38,
+      "name": "iat_std",
+      "definition": "Standard deviation of within-state inter-arrival time"
+    },
+    {
+      "index": 39,
+      "name": "iat_max",
+      "definition": "Maximum within-state inter-arrival time"
+    },
+    {
+      "index": 40,
+      "name": "active_duration_sec",
+      "definition": "Last packet timestamp - first packet timestamp"
+    },
+    {
+      "index": 41,
+      "name": "iat_burstiness",
+      "definition": "IAT burstiness statistic"
+    },
+    {
+      "index": 42,
+      "name": "max_src_ip_share",
+      "definition": "Maximum fraction of packets from one source IP"
+    },
+    {
+      "index": 43,
+      "name": "max_dst_port_share",
+      "definition": "Maximum fraction of packets to one destination port"
+    },
+    {
+      "index": 44,
+      "name": "missing_packet_length_ratio",
+      "definition": "Fraction of packets with missing packet length"
+    },
+    {
+      "index": 45,
+      "name": "missing_ttl_ratio",
+      "definition": "Fraction of packets with missing TTL"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+feature_index,feature_name,definition
+1,packet_count,Total packets in the 10-second state
+2,bytes_total,Total packet bytes in the 10-second state
+3,packets_per_sec,packet_count / 10
+4,bytes_per_sec,bytes_total / 10
+5,packet_length_mean,Mean packet length
+6,packet_length_std,Standard deviation of packet length
+7,packet_length_min,Minimum packet length
+8,packet_length_max,Maximum packet length
+9,src_ip_count,Number of unique source IP addresses
+10,dst_ip_count,Number of unique destination IP addresses
+11,unique_flow_pairs,"Number of unique (src_ip, dst_ip) pairs"
+12,src_port_count,Number of unique source ports
+13,dst_port_count,Number of unique destination ports
+14,protocol_count,Number of unique protocols
+15,src_to_dst_ip_ratio,src_ip_count / dst_ip_count
+16,tcp_packet_ratio,TCP packets / total packets
+17,udp_packet_ratio,UDP packets / total packets
+18,icmp_packet_ratio,ICMP packets / total packets
+19,syn_count,TCP packets containing SYN
+20,syn_ratio,syn_count / TCP packet count
+21,ack_count,TCP packets containing ACK
+22,ack_ratio,ack_count / TCP packet count
+23,fin_count,TCP packets containing FIN
+24,rst_count,TCP packets containing RST
+25,rst_ratio,rst_count / TCP packet count
+26,psh_count,TCP packets containing PSH
+27,tcp_flag_pattern_count,Number of unique TCP flag patterns
+28,ttl_mean,Mean TTL
+29,ttl_std,Standard deviation of TTL
+30,ttl_min,Minimum TTL
+31,ttl_max,Maximum TTL
+32,tcp_window_mean,Mean TCP window size
+33,tcp_window_std,Standard deviation of TCP window size
+34,zero_tcp_window_ratio,TCP packets with zero window / TCP packets
+35,src_ip_entropy,Entropy of source-IP distribution
+36,dst_port_entropy,Entropy of destination-port distribution
+37,iat_mean,Mean within-state inter-arrival time
+38,iat_std,Standard deviation of within-state inter-arrival time
+39,iat_max,Maximum within-state inter-arrival time
+40,active_duration_sec,Last packet timestamp - first packet timestamp
+41,iat_burstiness,IAT burstiness statistic
+42,max_src_ip_share,Maximum fraction of packets from one source IP
+43,max_dst_port_share,Maximum fraction of packets to one destination port
+44,missing_packet_length_ratio,Fraction of packets with missing packet length
+45,missing_ttl_ratio,Fraction of packets with missing TTL

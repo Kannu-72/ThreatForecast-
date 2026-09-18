@@ -1,0 +1,9 @@
+services:
+  preventx-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+      - ./data:/app/data
+    restart: unless-stopped

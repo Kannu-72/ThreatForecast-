@@ -1,0 +1,40 @@
+{
+  "project": "PREVENT-X",
+  "input_features": 45,
+  "history_states": 5,
+  "state_seconds": 10,
+  "history_seconds": 50,
+  "input_shape": [
+    5,
+    45
+  ],
+  "model": "Transformer",
+  "one_transformer": true,
+  "d_model": 64,
+  "n_heads": 4,
+  "num_layers": 2,
+  "dim_feedforward": 128,
+  "dropout": 0.1,
+  "output_steps": 6,
+  "output_shape": [
+    6
+  ],
+  "forecast_horizons_seconds": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "forecast_head": [
+    "LayerNorm(64)",
+    "Linear(64,6)",
+    "Sigmoid"
+  ],
+  "forecast_type": "direct multi-horizon forecasting",
+  "recursive_forecasting": false,
+  "number_of_models": 1,
+  "total_parameters": 70406,
+  "trainable_parameters": 70406
+}
